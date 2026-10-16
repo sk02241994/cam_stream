@@ -35,7 +35,3 @@ A NativeActivity Android app written entirely in C++ — no Gradle, no Java/Kotl
 - OpenCV is statically linked into a single library, with 16 KB page alignment for Android 15+ devices
 
 The app auto-reconnects if the stream drops, and handles the ESP32's limitation of one concurrent streaming client.
-
-## Why It Matters
-
-This project demonstrates an end-to-end embedded vision pipeline: camera capture on a microcontroller, wireless streaming, protocol parsing, and real-time computer vision on a mobile device — all built from the command line without an IDE.
