@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.esp32cam"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- Minimum API 24 (Android 7.0) for decent native window support -->
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="33" />
+
+    <!-- Internet permission to receive the WiFi stream -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- hasCode="false" means ZERO Java/Kotlin code. Pure native. -->
+    <application
+        android:label="ESP32Cam"
+        android:hasCode="false">
+
+        <activity
+            android:name="android.app.NativeActivity"
+            android:label="ESP32Cam"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true">
+
+            <!-- This tells NativeActivity to load libesp32cam.so -->
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="esp32cam" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

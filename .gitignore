@@ -1,0 +1,9 @@
+config.h
+build/
+managed_components/
+sdkconfig.old
+base.apk
+esp32cam.apk
+esp32cam.apk.idsig
+debug.keystore
+opencv-4.10.0-android-sdk.zip
